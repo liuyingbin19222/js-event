@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>onchange_event_demo</title>
+</head>
+<body>
+    <input type="text" id="text_" name="username" onchange="fun_onchange(this)">
+    <select name="all" onchange="fun_select(this)">
+        <option id="p1" value="选项一">选项一</option>
+        <option id="p2" value="选项二">选项二</option>
+        <option id="p3" value="选项三">选项三</option>
+    </select>
+</body>
+<script>
+    function fun_select(e){       
+        var content1 = document.getElementById("p1").innerHTML;
+        var content2 = document.getElementById("p2").innerHTML;
+        var content3 = document.getElementById("p3").innerHTML;
+        console.info(e.value);
+    }
+    function fun_onchange(e){
+        ///console.log('输入内容改变');
+        var htmlcon = document.getElementById('text_').value;
+        console.log(htmlcon);
+        console.info(htmlcon);
+    }
+</script>
+</html>
